@@ -17,7 +17,8 @@ namespace Dev.Data.Mappings
                 .HasColumnType("varchar(200)");
 
             // Define o campo como requirido, define o tipo da coluna            
-            builder.Property(p => p.Descricao)                
+            builder.Property(p => p.Descricao)
+                .IsRequired()
                 .HasColumnType("varchar(1000)");
 
             // Define o campo como requirido, define o tipo da coluna            
