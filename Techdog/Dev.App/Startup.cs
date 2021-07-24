@@ -32,10 +32,11 @@ namespace Dev.App
             services.AddDbContext<MeuDbContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            // Configuração da cultura
+            services.AddMvcConfiguration();
 
             // Configurando o automapper, informa o assemble.
-            // services.AddAutoMapper(typeof(Startup));
-
+            services.AddAutoMapper(typeof(Startup));
 
             //Injeção de dependencia
             services.ResolveDependencies();
